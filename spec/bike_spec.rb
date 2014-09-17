@@ -3,6 +3,9 @@ require 'bike'
 
 # we are describing the functionality of a specific class, Bike
 describe Bike do
+
+	# let(:bike) {Bike.new}
+
 	# this is a specific feature (behaviour)
 	# that we expect to be present
 	it "should not be broken after we create it" do
@@ -17,5 +20,9 @@ describe Bike do
 		bike.break!
 		expect(bike).to be_broken
 	end
+
+	it "should be able to get fixed" do
+		bike = Bike.new
+		bike.break!
 
 end
