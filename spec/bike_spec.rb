@@ -1,10 +1,10 @@
 # link to the Bike class
-require 'bike'
+require './lib/bike'
 
 # we are describing the functionality of a specific class, Bike
 describe Bike do
 
-	let(:bike) {Bike.new}
+	let(:bike) { Bike.new }
 
 	# this is a specific feature (behaviour)
 	# that we expect to be present
@@ -21,6 +21,8 @@ describe Bike do
 
 	it "should be able to get fixed" do
 		bike.break!
+		bike.fix!
+		expect(bike).not_to be_broken
 	end
 
 end
